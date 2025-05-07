@@ -7,8 +7,8 @@ const ProfileCardImage = () => {
       <Image 
         src="/profile-card.png" 
         alt="Profile Card Example" 
-        width={500}
-        height={300}
+        width={1024}
+        height={1059}
         className="rounded-xl shadow-lg"
         style={{ maxWidth: '100%', height: 'auto' }}
         priority
