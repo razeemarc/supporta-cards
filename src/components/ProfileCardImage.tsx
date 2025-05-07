@@ -1,13 +1,17 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ProfileCardImage = () => {
   return (
     <div className="flex justify-center mt-8 mb-16">
-      <img 
+      <Image 
         src="/profile-card.png" 
         alt="Profile Card Example" 
+        width={500}
+        height={300}
         className="rounded-xl shadow-lg"
         style={{ maxWidth: '100%', height: 'auto' }}
+        priority
       />
     </div>
   );
