@@ -68,34 +68,47 @@ export default function ProductShowcase() {
   }
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
-      <motion.div 
-        className="text-center mb-8"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <motion.span 
-          className="inline-block bg-purple-100 text-gray-800 px-4 py-1 rounded-full text-sm font-medium mb-3"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+    <div className="bg-white">
+      <section className="max-w-6xl mx-auto px-4 py-12 bg-white">
+        <motion.div 
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          NFC Cards
-        </motion.span>
-        <motion.h2 
-          className="text-2xl md:text-3xl font-bold"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          Explore The Designs
-        </motion.h2>
-      </motion.div>
+          <motion.span 
+            className="inline-block bg-purple-100 text-gray-800 px-4 py-1 rounded-full text-sm font-medium mb-3"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            NFC Cards
+          </motion.span>
+          <motion.h2 
+            className="text-2xl md:text-3xl font-bold"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            Explore The Designs
+          </motion.h2>
+        </motion.div>
 
-      {isMobile ? (
-        <div className="relative overflow-x-auto pb-8 -mx-4 px-4">
+        {isMobile ? (
+          <div className="relative overflow-x-auto pb-8 -mx-4 px-4">
+            <motion.div 
+              className="flex space-x-4 w-max"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </motion.div>
+          </div>
+        ) : (
           <motion.div 
-            className="flex space-x-4 w-max"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -104,39 +117,29 @@ export default function ProductShowcase() {
               <ProductCard key={product.id} product={product} />
             ))}
           </motion.div>
-        </div>
-      ) : (
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </motion.div>
-      )}
+        )}
 
-      <motion.div 
-        className="flex justify-center mt-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-      >
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+        {/* Explore button section */}
+        <motion.div 
+          className="flex justify-center mt-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Link
-            href="#"
-            className="inline-flex items-center justify-center px-8 py-2 border border-purple-500 text-purple-600 rounded-md hover:bg-purple-50 transition-colors"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Explore
-          </Link>
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center px-8 py-2 border border-purple-500 text-purple-600 rounded-md hover:bg-purple-50 transition-colors"
+            >
+              Explore
+            </Link>
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </section>
+      </section>
+    </div>
   )
 }
 

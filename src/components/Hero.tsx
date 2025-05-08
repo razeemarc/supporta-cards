@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Button from './Button';
-import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
@@ -69,7 +68,7 @@ const Hero: React.FC = () => {
               animate={{ x: [0, 5, 0] }}
               transition={{ repeat: Infinity, repeatDelay: 2, duration: 1 }}
             >
-              <ArrowRight size={20} />
+             
             </motion.span>
           </Button>
         </motion.div>
@@ -81,7 +80,7 @@ const Hero: React.FC = () => {
               animate={{ x: [0, 5, 0] }}
               transition={{ repeat: Infinity, repeatDelay: 2, duration: 1 }}
             >
-              <ArrowRight size={20} />
+             
             </motion.span>
           </Button>
         </motion.div>

@@ -1,8 +1,8 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
 import Button from './Button';
-import { ArrowRight } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         
         <Button variant="primary">
           Talk to Us
-          <ArrowRight size={20} />
+         
         </Button>
       </div>
     </nav>

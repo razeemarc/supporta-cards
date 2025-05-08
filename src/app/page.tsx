@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import ProfileCardImage from '../components/ProfileCardImage';
 import HowItWorks from '@/components/HowItWorks';
 import ProductShowcase from '@/components/ProductShowcase';
+import NfcProfileBanner from '@/components/ProfileBanner';
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <ProfileCardImage />
       <HowItWorks />
       <ProductShowcase/>
+      <NfcProfileBanner/>
     </div>
   );
 }

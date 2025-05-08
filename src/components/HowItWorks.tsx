@@ -73,12 +73,13 @@ export default function HowItWorks() {
   
 
   return (
+    <div className='bg-white pb-9 pt-6'>
     <motion.div 
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={sectionVariants}
-      className="w-full max-w-[1197px] mx-auto py-20 px-10 bg-[#f5f7ff] rounded-[40px]"
+      className="w-full max-w-[1197px] mx-auto py-20 px-10 bg-[#F1F3FF] rounded-[40px]"
     >
       <div className="flex flex-col items-center gap-[50px]">
         <motion.div 
@@ -192,5 +193,6 @@ export default function HowItWorks() {
         </div>
       </div>
     </motion.div>
+    </div>
   );
 }
