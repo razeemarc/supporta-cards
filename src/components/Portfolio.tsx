@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 const Portfolio = () => {
   return (
     <div className="flex justify-center mt-8 mb-16">
-      <div className="w-full max-w-4xl bg-black shadow-lg flex flex-col relative overflow-hidden">
+      <div className="w-full max-w-4xl h-[1058px] bg-black shadow-lg flex flex-col relative overflow-hidden">
         {/* Main image section with gradient */}
         <div className="relative w-full h-96 md:h-[500px]">
           <Image
@@ -26,78 +26,90 @@ const Portfolio = () => {
           />
           
           {/* Content overlay */}
-          <div className="absolute bottom-0 left-0 w-full p-8 z-10">
-            <h1 className="text-white text-5xl font-bold mb-2">Harshvardhan</h1>
-            <h2 className="text-white text-xl mb-4">UI / UX Designer</h2>
-            <p className="text-gray-300 text-sm max-w-md">
-              Deploy, manage and troubleshoot cloud-native applications that scale without overwhelming your engineers with the complexity of Kubernetes.
-            </p>
-            
-            {/* Social icons */}
-            <div className="flex gap-4 mt-6">
-              {['facebook', 'instagram', 'twitter', 'pinterest', 'linkedin', 'youtube'].map((social) => (
-                <div key={social} className="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center">
-                  {/* Social icons would go here */}
+          <div className="absolute top-63 bottom-0 left-0 w-full p-8 z-10">
+            <div className="flex justify-between items-end">
+              <div className="flex-1">
+                <h1 className="text-white text-5xl font-bold mb-2">Harshvardhan</h1>
+                <h2 className="text-white text-xl mb-4">UI / UX Designer</h2>
+                <p className="text-gray-300 text-sm max-w-md">
+                  Deploy, manage and troubleshoot cloud-native applications that scale without overwhelming your engineers with the complexity of Kubernetes.
+                </p>
+                
+                {/* Social icons */}
+                <div className="flex gap-4 mt-6">
+                  {['facebook', 'instagram', 'twitter', 'pinterest', 'linkedin', 'youtube'].map((social) => (
+                    <div key={social} className="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center">
+                      {/* Social icons would go here */}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              {/* Right side image */}
+              <div className="relative w-[313px] h-[313px] rounded-lg overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t   opacity-80"></div>
+                <Image
+                  src="/porfolio2.png" 
+                  alt="Profile portrait"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                 
+                />
+              </div>
             </div>
           </div>
         </div>
         
-        {/* Contact section */}
-        <div className="bg-black text-white p-8">
-          <h2 className="text-2xl font-bold mb-6">Contact</h2>
-          
-          <div className="space-y-4">
-            {/* Email row */}
-            <div className="flex items-start">
-              <div className="mr-4 p-2 bg-black rounded-full">
-                <Mail size={20} className="text-white" />
-              </div>
-              <div>
-                <div className="text-gray-300">harshvardhan@gmail.com</div>
-                <div className="text-gray-400 text-sm">harshvardhan@gmail.com</div>
-              </div>
-            </div>
-            
-            {/* Phone row */}
-            <div className="flex items-start">
-              <div className="mr-4 p-2 bg-black rounded-full">
-                <Phone size={20} className="text-white" />
-              </div>
-              <div>
-                <div className="text-gray-300">+91 9123456789</div>
-                <div className="text-gray-400 text-sm">+91 9123456789</div>
-                <div className="text-gray-400 text-sm">+91 9123456789</div>
-              </div>
-            </div>
-            
-            {/* Address row */}
-            <div className="flex items-start">
-              <div className="mr-4 p-2 bg-black rounded-full">
-                <MapPin size={20} className="text-white" />
-              </div>
-              <div>
-                <div className="text-gray-300">3rd floor, CSI Complex</div>
-                <div className="text-gray-400 text-sm">Baker Junction</div>
-                <div className="text-gray-400 text-sm">Kottayam, Kerala</div>
-                <div className="text-gray-400 text-sm">682016</div>
-              </div>
-            </div>
-            
-            {/* Website row */}
-            <div className="flex items-start">
-              <div className="mr-4 p-2 bg-black rounded-full">
-                <Globe size={20} className="text-white" />
-              </div>
-              <div>
-                <div className="text-gray-300">Website</div>
-                <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
-                <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
-              </div>
-            </div>
-          </div>
-        </div>
+{/* Contact section */}
+<div className="bg-black text-white px-8 pb-12">
+  <h2 className="text-2xl font-bold mb-6">Contact</h2>
+
+  {/* Row layout */}
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+    
+    {/* Email */}
+    <div className="flex flex-col items-start">
+      <div className="mb-2 p-2 bg-black rounded-full">
+        <Mail size={20} className="text-white" />
+      </div>
+      <div className="text-gray-300">harshvardhan@gmail.com</div>
+      <div className="text-gray-400 text-sm">harshvardhan@gmail.com</div>
+    </div>
+
+    {/* Phone */}
+    <div className="flex flex-col items-start">
+      <div className="mb-2 p-2 bg-black rounded-full">
+        <Phone size={20} className="text-white" />
+      </div>
+      <div className="text-gray-300">+91 9123456789</div>
+      <div className="text-gray-400 text-sm">+91 9123456789</div>
+      <div className="text-gray-400 text-sm">+91 9123456789</div>
+    </div>
+
+    {/* Address */}
+    <div className="flex flex-col items-start">
+      <div className="mb-2 p-2 bg-black rounded-full">
+        <MapPin size={20} className="text-white" />
+      </div>
+      <div className="text-gray-300">3rd floor, CSI Complex</div>
+      <div className="text-gray-400 text-sm">Baker Junction</div>
+      <div className="text-gray-400 text-sm">Kottayam, Kerala</div>
+      <div className="text-gray-400 text-sm">682016</div>
+    </div>
+
+    {/* Website */}
+    <div className="flex flex-col items-start">
+      <div className="mb-2 p-2 bg-black rounded-full">
+        <Globe size={20} className="text-white" />
+      </div>
+      <div className="text-gray-300">Website</div>
+      <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
+      <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
+    </div>
+
+  </div>
+</div>
+
       </div>
     </div>
   );
