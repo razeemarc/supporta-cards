@@ -91,6 +91,15 @@ const Portfolio = () => {
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
+                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
+                    <Image
+                      src="/threads.png"
+                      alt="threads icon"
+                      width={40}
+                      height={40}
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
                 </div>
               </div>
               
