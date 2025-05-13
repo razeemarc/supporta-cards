@@ -39,9 +39,33 @@ const Portfolio = () => {
           <div className="absolute top-100 bottom-0 left-0 w-full p-8 z-10">
             <div className="flex justify-between items-end">
               <div className="flex-1 ">
-                <h1 className="text-white text-5xl font-bold mb-2">Harshvardhan</h1>
-                <h2 className="text-white text-xl mb-4">UI / UX Designer</h2>
-                <p className="text-gray-300 text-sm max-w-md">
+                <h1
+                  className="text-white font-[500] tracking-normal mb-2
+                    text-[38px] leading-[48px]
+                    sm:text-[48px] sm:leading-[60px]
+                    md:text-[56px] md:leading-[72px]
+                    lg:text-[62px] lg:leading-[85px]"
+                  style={{ fontFamily: 'Kalnia' }}
+                >
+                  Harshvardhan
+                </h1>
+                <h2
+                  className="text-white font-normal align-middle tracking-normal mb-4
+                    text-[20px] leading-[36px]
+                    sm:text-[26px] sm:leading-[44px]
+                    md:text-[30px] md:leading-[52px]
+                    lg:text-[32px] lg:leading-[60px]"
+                  style={{ fontFamily: 'Merriweather' }}
+                >
+                  UI / UX Designer
+                </h2>
+                <p
+                  className="text-gray-300 font-normal align-middle tracking-wider max-w-md
+                    text-[16px] leading-[26px]
+                    sm:text-[17px] sm:leading-[28px]
+                    md:text-[18px] md:leading-[30px]"
+                  style={{ fontFamily: 'Inter' }}
+                >
                   Deploy, manage and troubleshoot cloud-native applications that scale without overwhelming your engineers with the complexity of Kubernetes.
                 </p>
                 
@@ -146,8 +170,20 @@ const Portfolio = () => {
                   />                </div>
               </div>
               <div>
-                <div className="text-gray-300">harshvardhan@gmail.com</div>
-                <div className="text-gray-400 text-sm">harshvardhan@gmail.com</div>
+                <div
+                  className="text-gray-300 font-normal align-middle tracking-normal
+                    text-[16px] leading-[24px]"
+                  style={{ fontFamily: 'Inter' }}
+                >
+                  harshvardhan@gmail.com
+                </div>
+                <div
+                  className="text-gray-400 text-sm font-normal align-middle tracking-normal
+                    text-[16px] leading-[24px]"
+                  style={{ fontFamily: 'Inter' }}
+                >
+                  harshvardhan@gmail.com
+                </div>
               </div>
             </div>
             
@@ -177,7 +213,7 @@ const Portfolio = () => {
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
-                <div>
+                                                                                                                                                                <div>
                   <div className="text-gray-300">+91 9123456789</div>
                   <div className="text-gray-400 text-sm">+91 9123456789</div>
                 </div>
