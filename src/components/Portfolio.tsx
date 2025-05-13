@@ -105,13 +105,12 @@ const Portfolio = () => {
               
               {/* Right side image */}
               <div className="relative w-[313px] h-[313px] rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t   opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-t opacity-80"></div>
                 <Image
                   src="/porfolio2.png" 
                   alt="Profile portrait"
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
-                 
                 />
               </div>
             </div>
@@ -121,40 +120,60 @@ const Portfolio = () => {
         {/* Contact section at the bottom */}
         <div className="bg-black text-white px-8 pb-12 mt-auto">
           <h2 className="text-2xl font-bold mb-6">Contact</h2>
-          {/* Row layout */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+          
+          {/* First row - Email, Phone, Address with horizontal icon layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm mb-8">
             {/* Email */}
-            <div className="flex flex-col items-start">
-              <div className="mb-2 p-2 bg-black rounded-full">
-                <Mail size={20} className="text-white" />
+            <div className="flex items-start">
+              <div className="mr-3 mt-1">
+                <div className="rounded-full bg-black p-1">
+                  <Mail size={20} className="text-white" />
+                </div>
               </div>
-              <div className="text-gray-300">harshvardhan@gmail.com</div>
-              <div className="text-gray-400 text-sm">harshvardhan@gmail.com</div>
+              <div>
+                <div className="text-gray-300">harshvardhan@gmail.com</div>
+                <div className="text-gray-400 text-sm">harshvardhan@gmail.com</div>
+              </div>
             </div>
+            
             {/* Phone */}
-            <div className="flex flex-col items-start">
-              <div className="mb-2 p-2 bg-black rounded-full">
-                <Phone size={20} className="text-white" />
+            <div className="flex items-start">
+              <div className="mr-3 mt-1">
+                <div className="rounded-full bg-black p-1">
+                  <Phone size={20} className="text-white" />
+                </div>
               </div>
-              <div className="text-gray-300">+91 9123456789</div>
-              <div className="text-gray-400 text-sm">+91 9123456789</div>
-              <div className="text-gray-400 text-sm">+91 9123456789</div>
+              <div>
+                <div className="text-gray-300">+91 9123456789</div>
+                <div className="text-gray-400 text-sm">+91 9123456789</div>
+                <div className="text-gray-400 text-sm">+91 9123456789</div>
+              </div>
             </div>
+            
             {/* Address */}
-            <div className="flex flex-col items-start">
-              <div className="mb-2 p-2 bg-black rounded-full">
-                <MapPin size={20} className="text-white" />
+            <div className="flex items-start">
+              <div className="mr-3 mt-1">
+                <div className="rounded-full bg-black p-1">
+                  <MapPin size={20} className="text-white" />
+                </div>
               </div>
-              <div className="text-gray-300">3rd floor, CSI Complex</div>
-              <div className="text-gray-400 text-sm">Baker Junction</div>
-              <div className="text-gray-400 text-sm">Kottayam, Kerala</div>
-              <div className="text-gray-400 text-sm">682016</div>
+              <div>
+                <div className="text-gray-300">3rd floor, CSI Complex</div>
+                <div className="text-gray-400 text-sm">Baker Junction</div>
+                <div className="text-gray-400 text-sm">Kottayam, Kerala</div>
+                <div className="text-gray-400 text-sm">682016</div>
+              </div>
             </div>
-            {/* Website */}
-            <div className="flex flex-col items-start">
-              <div className="mb-2 p-2 bg-black rounded-full">
+          </div>
+          
+          {/* Second row - Website with horizontal icon layout */}
+          <div className="flex items-start">
+            <div className="mr-3 mt-1">
+              <div className="rounded-full bg-black p-1">
                 <Globe size={20} className="text-white" />
               </div>
+            </div>
+            <div>
               <div className="text-gray-300">Website</div>
               <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
               <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
