@@ -3,21 +3,22 @@ import Image from 'next/image';
 
 const Portfolio = () => {
   return (
-    <div className="flex justify-center mt-8 mb-16">
-      <div className="w-full max-w-4xl h-[1058px] bg-black shadow-lg flex flex-col relative overflow-hidden">
-        {/* Overlay A.png in the top-left corner */}
-        <div className="absolute top-5 left-5 z-20">
+    <div className="flex justify-center mt-8 mb-16 px-4">
+      <div className="w-full max-w-6xl bg-black shadow-lg flex flex-col relative overflow-hidden rounded-lg">
+        {/* Overlay A.png */}
+        <div className="absolute top-4 left-4 z-20">
           <Image
             src="/A.png"
             alt="A overlay"
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             style={{ objectFit: 'contain' }}
             priority
           />
         </div>
-        {/* Main image section with gradient */}
-        <div className="relative w-full h-96 md:h-[500px] flex-grow">
+
+        {/* Header section with background */}
+        <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px]">
           <Image
             src="/portfolio1.png"
             alt="Portfolio background"
@@ -25,123 +26,55 @@ const Portfolio = () => {
             style={{ objectFit: 'cover' }}
             priority
           />
-          
-          {/* Smoother gradient overlay */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.9) 90%, #000000 100%)',
-              opacity: 1
+              background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.9) 90%, #000000 100%)',
             }}
           />
-          
-          {/* Content overlay */}
-          <div className="absolute top-100 bottom-0 left-0 w-full p-8 z-10">
-            <div className="flex justify-between items-end">
-              <div className="flex-1 ">
+          {/* Content */}
+          <div className="absolute bottom-0 left-0 w-full p-6 sm:p-10 z-10">
+            <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-6">
+              <div className="flex-1 text-center lg:text-left">
                 <h1
-                  className="text-white font-[500] tracking-normal mb-2
-                    text-[38px] leading-[48px]
-                    sm:text-[48px] sm:leading-[60px]
-                    md:text-[56px] md:leading-[72px]
-                    lg:text-[62px] lg:leading-[85px]"
+                  className="text-white font-medium text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-tight"
                   style={{ fontFamily: 'Kalnia' }}
                 >
                   Harshvardhan
                 </h1>
                 <h2
-                  className="text-white font-normal align-middle tracking-normal mb-4
-                    text-[20px] leading-[36px]
-                    sm:text-[26px] sm:leading-[44px]
-                    md:text-[30px] md:leading-[52px]
-                    lg:text-[32px] lg:leading-[60px]"
+                  className="text-white font-normal text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] leading-tight"
                   style={{ fontFamily: 'Merriweather' }}
                 >
                   UI / UX Designer
                 </h2>
                 <p
-                  className="text-gray-300 font-normal align-middle tracking-wider max-w-md
-                    text-[16px] leading-[26px]
-                    sm:text-[17px] sm:leading-[28px]
-                    md:text-[18px] md:leading-[30px]"
+                  className="text-gray-300 mt-4 text-[14px] sm:text-[16px] md:text-[18px] max-w-xl mx-auto lg:mx-0"
                   style={{ fontFamily: 'Inter' }}
                 >
                   Deploy, manage and troubleshoot cloud-native applications that scale without overwhelming your engineers with the complexity of Kubernetes.
                 </p>
-                
-                {/* Social icons */}
-                <div className="flex gap-4 mt-6">
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/facebook.png"
-                      alt="facebook icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/instagram.png"
-                      alt="instagram icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/X.png"
-                      alt="twitter icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/pinterest.png"
-                      alt="pinterest icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/linkdin.png"
-                      alt="linkedin icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/youtube.png"
-                      alt="youtube icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/threads.png"
-                      alt="threads icon"
-                      width={40}
-                      height={40}
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
+
+                {/* Social Media */}
+                <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
+                  {['facebook', 'instagram', 'X', 'pinterest', 'linkdin', 'youtube', 'threads'].map((icon, idx) => (
+                    <div key={idx} className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
+                      <Image
+                        src={`/${icon}.png`}
+                        alt={`${icon} icon`}
+                        width={30}
+                        height={30}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
-              
-              {/* Right side image */}
-              <div className="relative w-[313px] h-[313px] rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t opacity-80"></div>
+
+              {/* Profile Image */}
+              <div className="relative w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] lg:w-[300px] lg:h-[300px] rounded-lg overflow-hidden">
                 <Image
-                  src="/porfolio2.png" 
+                  src="/porfolio2.png"
                   alt="Profile portrait"
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -150,89 +83,40 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        
-        {/* Contact section at the bottom */}
-        <div className="bg-black text-white px-8 pb-12 mt-auto">
-          <h2 className="text-2xl font-bold mb-6">Contact</h2>
-          
-          {/* First row - Email, Phone, Address with horizontal icon layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm mb-8">
+
+        {/* Contact Section */}
+        <div className="bg-black text-white px-6 sm:px-10 py-10">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6">Contact</h2>
+
+          {/* Contact Info Rows */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm mb-8">
             {/* Email */}
-            <div className="flex items-start">
-              <div className="mr-3 mt-1">
-                <div className="rounded-full bg-black p-1">
-                <Image
-                    src="/icons/email-icon.png"
-                    alt="mail icon"
-                    width={30}
-                    height={30}
-                    style={{ objectFit: 'contain' }}
-                  />                </div>
-              </div>
+            <div className="flex items-start gap-3">
+              <Image src="/icons/email-icon.png" alt="email" width={30} height={30} />
               <div>
-                <div
-                  className="text-gray-300 font-normal align-middle tracking-normal
-                    text-[16px] leading-[24px]"
-                  style={{ fontFamily: 'Inter' }}
-                >
-                  harshvardhan@gmail.com
-                </div>
-                <div
-                  className="text-gray-400 text-sm font-normal align-middle tracking-normal
-                    text-[16px] leading-[24px]"
-                  style={{ fontFamily: 'Inter' }}
-                >
-                  harshvardhan@gmail.com
-                </div>
+                <div className="text-gray-300">harshvardhan@gmail.com</div>
+                <div className="text-gray-400 text-sm">Email ID</div>
               </div>
             </div>
-            
+
             {/* Phone */}
-            <div>
-              {/* WhatsApp row */}
-              <div className="flex items-center mb-3">
-                <div className="rounded-full bg-black p-1 mr-3">
-                  <Image
-                    src="/icons/whatsapp-icon.png"
-                    alt="whatsapp icon"
-                    width={30}
-                    height={30}
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <Image src="/icons/whatsapp-icon.png" alt="whatsapp" width={30} height={30} />
                 <div className="text-gray-300">+91 9123456789</div>
               </div>
-              {/* Phone row */}
-              <div className="flex items-center">
-                <div className="rounded-full bg-black p-1 mr-3">
-                  <Image
-                    src="/icons/phone-icon.png"
-                    alt="phone icon"
-                    width={30}
-                    height={30}
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                                                                                                                                                                <div>
+              <div className="flex items-center gap-3">
+                <Image src="/icons/phone-icon.png" alt="phone" width={30} height={30} />
+                <div>
                   <div className="text-gray-300">+91 9123456789</div>
-                  <div className="text-gray-400 text-sm">+91 9123456789</div>
+                  <div className="text-gray-300 ">+91 9123456789</div>
                 </div>
               </div>
             </div>
-            
+
             {/* Address */}
-            <div className="flex items-start">
-              <div className="mr-3 mt-1">
-                <div className="rounded-full bg-black p-1">
-                <Image
-                    src="/icons/address-icon.png"
-                    alt="mail icon"
-                    width={30}
-                    height={30}
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-              </div>
+            <div className="flex items-start gap-3">
+              <Image src="/icons/address-icon.png" alt="address" width={30} height={30} />
               <div>
                 <div className="text-gray-300">3rd floor, CSI Complex</div>
                 <div className="text-gray-400 text-sm">Baker Junction</div>
@@ -241,24 +125,14 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          
-          {/* Second row - Website with horizontal icon layout */}
-          <div className="flex items-start">
-            <div className="mr-3 mt-1">
-              <div className="rounded-full bg-black p-1">
-              <Image
-                    src="/icons/website-icon.png"
-                    alt="mail icon"
-                    width={30}
-                    height={30}
-                    style={{ objectFit: 'contain' }}
-                  />
-              </div>
-            </div>
+
+          {/* Website Row */}
+          <div className="flex items-start gap-3">
+            <Image src="/icons/website-icon.png" alt="website" width={30} height={30} />
             <div>
               <div className="text-gray-300">Website</div>
-              <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
-              <div className="text-gray-400 text-sm">Editing workflow.tech into where you drag/drop is a single/effort</div>
+              <div className="text-gray-400 text-sm">workflow.tech editing drag/drop</div>
+              <div className="text-gray-400 text-sm">Effortless design solutions</div>
             </div>
           </div>
         </div>
