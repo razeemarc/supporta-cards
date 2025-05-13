@@ -152,30 +152,34 @@ const Portfolio = () => {
             </div>
             
             {/* Phone */}
-            <div className="flex items-start">
-              <div className="mr-3 mt-1">
-                <div className="rounded-full bg-black p-1">
-                <Image
+            <div>
+              {/* WhatsApp row */}
+              <div className="flex items-center mb-3">
+                <div className="rounded-full bg-black p-1 mr-3">
+                  <Image
                     src="/icons/whatsapp-icon.png"
-                    alt="pjone icon"
+                    alt="whatsapp icon"
                     width={30}
                     height={30}
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
-              </div>
-              <div>
                 <div className="text-gray-300">+91 9123456789</div>
-                <div className="rounded-full bg-black p-1 pt-4">
-                <Image
+              </div>
+              {/* Phone row */}
+              <div className="flex items-center">
+                <div className="rounded-full bg-black p-1 mr-3">
+                  <Image
                     src="/icons/phone-icon.png"
-                    alt="mail icon"
+                    alt="phone icon"
                     width={30}
                     height={30}
                     style={{ objectFit: 'contain' }}
                   />
-                <div className="text-gray-400 text-sm">+91 9123456789</div>
-                <div className="text-gray-400 text-sm">+91 9123456789</div>
+                </div>
+                <div>
+                  <div className="text-gray-300">+91 9123456789</div>
+                  <div className="text-gray-400 text-sm">+91 9123456789</div>
                 </div>
               </div>
             </div>
