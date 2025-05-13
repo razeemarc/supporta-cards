@@ -96,7 +96,7 @@ const Portfolio = () => {
               <Image src="/icons/email-icon.png" alt="email" width={24} height={24} />
               <div>
                 <div className="text-gray-300 text-sm sm:text-base">harshvardhan@gmail.com</div>
-                <div className="text-gray-400 text-xs">Email ID</div>
+                <div className="text-gray-300 text-sm sm:text-base pt-2">harshvardhan@gmail.com</div>
               </div>
             </div>
 
