@@ -34,9 +34,9 @@ const Portfolio = () => {
             }}
           />
           {/* Content */}
-          <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 md:p-10 z-10">
+          <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 md:p-10 z-10 lg:top-73">
             <div className="flex flex-row justify-between items-center gap-4 sm:gap-6">
-              <div className="flex-1 text-center lg:text-left">
+              <div className="flex-1 text-center lg:text-left ">
                 <h1
                   className="text-white font-medium text-[20px] sm:text-[28px] md:text-[36px] lg:text-[48px] leading-tight"
                   style={{ fontFamily: 'Kalnia' }}
@@ -73,7 +73,7 @@ const Portfolio = () => {
               </div>
 
               {/* Profile Image */}
-              <div className="relative w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] md:w-[180px] md:h-[180px] lg:w-[260px] lg:h-[260px] rounded-lg overflow-hidden">
+              <div className="relative  sm:w-[140px] sm:h-[140px] md:w-[300px] md:h-[300px] lg:w-[360px] lg:h-[360px] rounded-lg overflow-hidden md:top-2  md:right-10 sm:top-2">
                 <Image
                   src="/porfolio2.png"
                   alt="Profile portrait"
@@ -86,7 +86,7 @@ const Portfolio = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-black text-white px-4 sm:px-6 md:px-10 py-8 sm:py-10">
+        <div className="bg-black text-white px-4 sm:px-6 md:px-10 py-8 sm:py-10 mt-7">
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">Contact</h2>
 
           {/* Contact Info Rows */}
@@ -132,8 +132,8 @@ const Portfolio = () => {
             <Image src="/icons/website-icon.png" alt="website" width={24} height={24} />
             <div>
               <div className="text-gray-300 text-sm sm:text-base">Website</div>
-              <div className="text-gray-400 text-xs">workflow.tech editing drag/drop</div>
-              <div className="text-gray-400 text-xs">Effortless design solutions</div>
+              <div className="text-gray-300 text-sm">Editing workflow built into where you dsxgcjhghjnkj bvhgvffgtwork</div>
+              <div className="text-gray-300 text-sm pt-2">Editing workflow built into where you dsxgcjhghjnkj bvhgvffgtwork</div>
             </div>
           </div>
         </div>
