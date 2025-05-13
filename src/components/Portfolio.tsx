@@ -57,14 +57,14 @@ const Portfolio = () => {
                 </p>
 
                 {/* Social Media */}
-                <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mt-3 sm:mt-4">
+                <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mt-6 sm:mt-8">
                   {['facebook', 'instagram', 'X', 'pinterest', 'linkdin', 'youtube', 'threads'].map((icon, idx) => (
                     <div key={idx} className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center">
                       <Image
                         src={`/${icon}.png`}
                         alt={`${icon} icon`}
-                        width={20}
-                        height={20}
+                        width={30}
+                        height={30}
                         style={{ objectFit: 'contain' }}
                       />
                     </div>
