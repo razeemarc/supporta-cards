@@ -58,8 +58,22 @@ const Portfolio = () => {
 
                 {/* Social Media */}
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mt-6 sm:mt-8">
-                  {['facebook', 'instagram', 'X', 'pinterest', 'linkdin', 'youtube', 'threads'].map((icon, idx) => (
-                    <div key={idx} className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center">
+                  {[
+                    { icon: 'facebook', link: 'https://facebook.com' },
+                    { icon: 'instagram', link: 'https://instagram.com' },
+                    { icon: 'X', link: 'https://x.com' },
+                    { icon: 'pinterest', link: 'https://pinterest.com' },
+                    { icon: 'linkdin', link: 'https://linkedin.com' },
+                    { icon: 'youtube', link: 'https://youtube.com' },
+                    { icon: 'threads', link: 'https://threads.net' }
+                  ].map(({ icon, link }, idx) => (
+                    <a
+                      key={idx}
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center cursor-pointer"
+                    >
                       <Image
                         src={`/${icon}.png`}
                         alt={`${icon} icon`}
@@ -67,7 +81,7 @@ const Portfolio = () => {
                         height={30}
                         style={{ objectFit: 'contain' }}
                       />
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
