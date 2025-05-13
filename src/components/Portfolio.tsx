@@ -1,11 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 
 const Portfolio = () => {
   return (
     <div className="flex justify-center mt-8 mb-16">
       <div className="w-full max-w-4xl h-[1058px] bg-black shadow-lg flex flex-col relative overflow-hidden">
+        {/* Overlay A.png in the top-left corner */}
+        <div className="absolute top-5 left-5 z-20">
+          <Image
+            src="/A.png"
+            alt="A overlay"
+            width={100}
+            height={100}
+            style={{ objectFit: 'contain' }}
+            priority
+          />
+        </div>
         {/* Main image section with gradient */}
         <div className="relative w-full h-96 md:h-[500px] flex-grow">
           <Image
@@ -127,8 +137,13 @@ const Portfolio = () => {
             <div className="flex items-start">
               <div className="mr-3 mt-1">
                 <div className="rounded-full bg-black p-1">
-                  <Mail size={20} className="text-white" />
-                </div>
+                <Image
+                    src="/icons/email-icon.png"
+                    alt="mail icon"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: 'contain' }}
+                  />                </div>
               </div>
               <div>
                 <div className="text-gray-300">harshvardhan@gmail.com</div>
@@ -140,13 +155,28 @@ const Portfolio = () => {
             <div className="flex items-start">
               <div className="mr-3 mt-1">
                 <div className="rounded-full bg-black p-1">
-                  <Phone size={20} className="text-white" />
+                <Image
+                    src="/icons/whatsapp-icon.png"
+                    alt="pjone icon"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
               </div>
               <div>
                 <div className="text-gray-300">+91 9123456789</div>
+                <div className="rounded-full bg-black p-1 pt-4">
+                <Image
+                    src="/icons/phone-icon.png"
+                    alt="mail icon"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: 'contain' }}
+                  />
                 <div className="text-gray-400 text-sm">+91 9123456789</div>
                 <div className="text-gray-400 text-sm">+91 9123456789</div>
+                </div>
               </div>
             </div>
             
@@ -154,7 +184,13 @@ const Portfolio = () => {
             <div className="flex items-start">
               <div className="mr-3 mt-1">
                 <div className="rounded-full bg-black p-1">
-                  <MapPin size={20} className="text-white" />
+                <Image
+                    src="/icons/address-icon.png"
+                    alt="mail icon"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
               </div>
               <div>
@@ -170,7 +206,13 @@ const Portfolio = () => {
           <div className="flex items-start">
             <div className="mr-3 mt-1">
               <div className="rounded-full bg-black p-1">
-                <Globe size={20} className="text-white" />
+              <Image
+                    src="/icons/website-icon.png"
+                    alt="mail icon"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: 'contain' }}
+                  />
               </div>
             </div>
             <div>
