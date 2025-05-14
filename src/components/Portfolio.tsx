@@ -146,7 +146,13 @@ const Portfolio = () => {
             </div>
 
             {/* Address */}
-            <div className="flex items-start gap-3">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=3rd+floor,+CSI+Complex,+Baker+Junction,+Kottayam,+Kerala+682016"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 cursor-pointer"
+              title="Open in Google Maps"
+            >
               <Image src="/icons/address-icon.png" alt="address" width={30} height={30} />
               <div>
                 <div className="text-gray-300 text-sm sm:text-base">3rd floor, CSI Complex</div>
@@ -154,7 +160,7 @@ const Portfolio = () => {
                 <div className="text-gray-300 text-sm">Kottayam, Kerala</div>
                 <div className="text-gray-300 text-sm">682016</div>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Website Row */}
