@@ -107,21 +107,37 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-sm mb-6 sm:mb-8">
             {/* Email */}
             <div className="flex items-start gap-3">
-              <Image src="/icons/email-icon.png" alt="email" width={24} height={24} />
+              <a
+                href="mailto:harshvardhan@gmail.com"
+                className="flex-shrink-0 cursor-pointer"
+                title="Send Email"
+              >
+                <Image src="/icons/email-icon.png" alt="email" width={30} height={30} />
+              </a>
               <div>
-                <div className="text-gray-300 text-sm sm:text-base">harshvardhan@gmail.com</div>
-                <div className="text-gray-300 text-sm sm:text-base pt-2">harshvardhan@gmail.com</div>
+                <a
+                  href="mailto:harshvardhan@gmail.com"
+                  className="text-gray-300 text-sm sm:text-base cursor-pointer block"
+                >
+                  harshvardhan@gmail.com
+                </a>
+                <a
+                  href="mailto:harshvardhan@gmail.com"
+                  className="text-gray-300 text-sm sm:text-base pt-2 cursor-pointer block"
+                >
+                  harshvardhan@gmail.com
+                </a>
               </div>
             </div>
 
             {/* Phone */}
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-3">
-                <Image src="/icons/whatsapp-icon.png" alt="whatsapp" width={24} height={24} />
+                <Image src="/icons/whatsapp-icon.png" alt="whatsapp" width={30} height={30} />
                 <div className="text-gray-300 text-sm sm:text-base">+91 9123456789</div>
               </div>
               <div className="flex items-center gap-3">
-                <Image src="/icons/phone-icon.png" alt="phone" width={24} height={24} />
+                <Image src="/icons/phone-icon.png" alt="phone" width={30} height={30} />
                 <div>
                   <div className="text-gray-300 text-sm sm:text-base">+91 9123456789</div>
                   <div className="text-gray-300 text-sm sm:text-base">+91 9123456789</div>
@@ -131,19 +147,19 @@ const Portfolio = () => {
 
             {/* Address */}
             <div className="flex items-start gap-3">
-              <Image src="/icons/address-icon.png" alt="address" width={24} height={24} />
+              <Image src="/icons/address-icon.png" alt="address" width={30} height={30} />
               <div>
                 <div className="text-gray-300 text-sm sm:text-base">3rd floor, CSI Complex</div>
-                <div className="text-gray-400 text-xs">Baker Junction</div>
-                <div className="text-gray-400 text-xs">Kottayam, Kerala</div>
-                <div className="text-gray-400 text-xs">682016</div>
+                <div className="text-gray-300 text-sm">Baker Junction</div>
+                <div className="text-gray-300 text-sm">Kottayam, Kerala</div>
+                <div className="text-gray-300 text-sm">682016</div>
               </div>
             </div>
           </div>
 
           {/* Website Row */}
           <div className="flex items-start gap-3">
-            <Image src="/icons/website-icon.png" alt="website" width={24} height={24} />
+            <Image src="/icons/website-icon.png" alt="website" width={30} height={30} />
             <div>
               <div className="text-gray-300 text-sm sm:text-base">Website</div>
               <div className="text-gray-300 text-sm">Editing workflow built into where you dsxgcjhghjnkj bvhgvffgtwork</div>
