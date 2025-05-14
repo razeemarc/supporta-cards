@@ -132,17 +132,27 @@ const Portfolio = () => {
 
             {/* Phone */}
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-3">
+              <a
+                href="https://wa.me/919123456789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 cursor-pointer"
+                title="Chat on WhatsApp"
+              >
                 <Image src="/icons/whatsapp-icon.png" alt="whatsapp" width={30} height={30} />
-                <div className="text-gray-300 text-sm sm:text-base">+91 9123456789</div>
-              </div>
-              <div className="flex items-center gap-3">
+                <div className="text-gray-300 text-sm sm:text-base">+91 9188911326</div>
+              </a>
+              <a
+                href="tel:+919188911326"
+                className="flex items-center gap-3 cursor-pointer"
+                title="Call Phone"
+              >
                 <Image src="/icons/phone-icon.png" alt="phone" width={30} height={30} />
                 <div>
-                  <div className="text-gray-300 text-sm sm:text-base">+91 9123456789</div>
-                  <div className="text-gray-300 text-sm sm:text-base">+91 9123456789</div>
+                  <div className="text-gray-300 text-sm sm:text-base">+91 9188911326</div>
+                  <div className="text-gray-300 text-sm sm:text-base">+91 9188911326</div>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* Address */}
